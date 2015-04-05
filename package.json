@@ -2,9 +2,9 @@
   "name": "Unbend_Records",
   "version": "0.8.0",
   "description": "Unbend Records Website",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./server.js",
+    "start": "node ./index.js",
     "test": "echo \"Error: no test specified\""
   },
   "repository": {

@@ -8,7 +8,7 @@ module.exports = {
     token: env.prerenderToken
   },
   loggerName : env.loggerName,
-  httpPort   : env.httpPort || 3000,
+  httpPort   : process.env.PORT || env.httpPort || 3000,
   dbConfig   : {
     login      : env.db_login,
     pass       : env.db_pass,
