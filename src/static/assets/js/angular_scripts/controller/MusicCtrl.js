@@ -1,27 +1,27 @@
 app.factory('Music', function($http, $q){
 
-    var music = {
+  var music = {
 
-        music : false,
+    music : false,
 
-        getMusic : function(){
-            var deferred = $q.defer();
-            if (music.music !== false){
+    getMusic : function () {
+      var deferred = $q.defer();
+      if (music.music !== false) {
+        deferred.resolve(music.music);
+      } else {
+        $http({method: 'GET', url: './albums.json'}).
+              success(function (data, status, headers, config) {
+                music.music = data;
                 deferred.resolve(music.music);
-            }else{
-                $http({method: 'GET', url: './albums.json'}).
-                    success(function(data, status, headers, config) {
-                        music.music = data;
-                        deferred.resolve(music.music);
-                    }).
-                    error(function(data, status, headers, config) {
-                        deferred.reject('Network Problem!!');
-                    });
-            }
-            return deferred.promise;
-        }
-    };
-    return music;
+              }).
+              error(function (data, status, headers, config) {
+                deferred.reject('Network Problem!!');
+              });
+      }
+      return deferred.promise;
+    }
+  };
+  return music;
 
 });
 
