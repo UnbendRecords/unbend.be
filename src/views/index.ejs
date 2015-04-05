@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+
+    <!-- ## SITE META ## -->
+    <meta charset="utf-8">
+    <title>Unbend Records</title>
+
+    <meta name="description" content="Unbend Records Studio Page">
+    <meta name="author" content="Louis Borsu">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico">
+
+    <!-- ## LOAD STYLSHEETS ## -->
+    <link rel="stylesheet" media="all" href="./assets/css/style.css"/>
+    <link rel="stylesheet" media="all" href="./assets/css/custom.css"/>
+
+    <!-- ## GOOGLE FONTS ## -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600' rel='stylesheet' type='text/css'>
+
+    <!-- ## Favicons in tha mood -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=A0vLOxq3OR">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=A0vLOxq3OR">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=A0vLOxq3OR" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-194x194.png?v=A0vLOxq3OR" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png?v=A0vLOxq3OR" sizes="96x96">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png?v=A0vLOxq3OR" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=A0vLOxq3OR" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=A0vLOxq3OR">
+    <link rel="shortcut icon" href="/favicon.ico?v=A0vLOxq3OR">
+    <meta name="msapplication-TileColor" content="#f88938">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=A0vLOxq3OR">
+    <meta name="theme-color" content="#f88938">
+
+
+    <!-- ## SEO ## -->
+    <meta name="keywords" content="recording, studio, Brussels.">
+    <meta name="description" content="Unbend Records is a recording studio in Brussels.">
+    <meta name="author" content="Unbend Records">
+    <link rel="author" href="https://plus.google.com/117286070170200576270">
+    <link rel="publisher" href="https://plus.google.com/117286070170200576270">
+    <meta property="og:title" content="Unbend Records">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://unbend.be">
+    <meta property="og:image" content="http://unbend.be/fbog.jpg">
+    <meta property="og:description" content="Unbend Records is a recording studio in Brussels.">
+    <meta property="fb:admins" content="558346437">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@unbendrecords">
+    <meta name="twitter:creator" content="@unbendrecords">
+    <meta name="twitter:url" content="http://unbend.be">
+    <meta name="twitter:title" content="Unbend Records">
+    <meta name="twitter:description" content="Unbend Records is a recording studio in Brussels.">
+    <meta name="twitter:image" content="http://unbend.be/fbog.jpg">
+
+</head>
+
+<body>
+
+<!-- ## LOGO ## -->
+<aside id="logo-bar" ng-controller="NavCtrl">
+    <div id="logo">
+        <a href="./" ng-click="navAction('home')">
+            <img src="./assets/img/logo.png" alt="Unbend Records" />
+        </a>
+    </div>
+</aside>
+
+<!-- ## PAGE GLOBAL ## -->
+<section id="page-global">
+
+    <!-- ## NAV HEADER ## -->
+    <header id="nav-header" class="clearfix" ng-controller="NavCtrl">
+        <!-- ## PRIMARY NAV ## -->
+        <nav id="primary-nav">
+            <ul class="clearfix">
+                <li>
+                    <a href="discography" ng-click="navAction('discography')">
+                        <i class="icon-music-1"></i>
+                        <p>Discography</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="studio" ng-click="navAction('studio')">
+                        <i class="icon-mic"></i>
+                        <p>Studio</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact" ng-click="navAction('contact')">
+                        <i class="icon-email"></i>
+                        <p>Contact</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- ## SEC NAV ## -->
+        <nav id="sec-nav">
+            <ul class="clearfix"></ul>
+        </nav>
+
+        <!-- ## MOBILE NAV ## -->
+        <ul id="mobileNav">
+            <li>
+                <a href="#">
+                    <i class="icon-menu"></i> Navigation
+                    <i class="icon-down-open-big"></i>
+                </a>
+                <ul class="clearfix"></ul>
+            </li>
+        </ul>
+
+    </header>
+    <!-- ## NAV HEADER END ## -->
+
+
+    <section class="view view-fade angular-animate" ng-view>
+    </section>
+
+</section>
+<!-- ## PAGE GLOBAL END ## -->
+
+
+
+<!-- ## LOAD JAVASCRIPTS ## -->
+<script src="./assets/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&#038;sensor=false&#038;ver=3.5" type="text/javascript"></script>
+<script src="./assets/js/library.js" type="text/javascript"></script>
+<script src="./assets/js/jplayer/jquery.jplayer.min.js" type="text/javascript"></script>
+<script src="./assets/js/jplayer/jplayer.playlist.min.js" type="text/javascript"></script>
+<script src="./assets/js/supersized/supersized.3.2.7.min.js" type="text/javascript"></script>
+<script src="./assets/js/supersized/supersized.shutter.js" type="text/javascript"></script>
+<script src="./assets/js/init.js" type="text/javascript"></script>
+<script src="./assets/js/plugins/angular/angular.min.js"></script>
+<script src="./assets/js/plugins/angular/angular-animate.min.js"></script>
+<script src="./assets/js/plugins/angular/angular-route.min.js"></script>
+<script src="./assets/js/angular_scripts/app.js"></script>
+<script src="./assets/js/angular_scripts/controller/NavCtrl.js"></script>
+<script src="./assets/js/angular_scripts/controller/MusicCtrl.js"></script>
+
+
+    <!-- ## FULLSCREEN SLIDESHOW ## -->
+    <script type="text/javascript">
+        jQuery(function($){
+            $.supersized({
+              slide_interval   :4000,
+              transition       :1,
+              transition_speed :1500,
+              slide_links      :false,
+              slides           :[
+                {image : './assets/img/background_page/Studio1.jpg'},
+                {image : './assets/img/background_page/Studio7.jpg'}
+              ]
+            });
+        });
+    </script>
+</body>
+
+</html>

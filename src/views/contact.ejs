@@ -1,0 +1,119 @@
+<div id="page-wrapper">
+
+  <!-- ## PAGE ## -->
+  <section id="page">
+
+    <!-- ## FIXY WRAPPER ## -->
+    <div id="fixy">
+      <!-- ## PAGE HEADER ## -->
+      <header id="page-header">
+        <h1>Contact. <span> Get In Touch With Us </span></h1>
+      </header>
+
+    </div>
+    <!-- ## FIXY WRAPPER END ## -->
+
+    <!-- ## PAGE CONTENT ## -->
+    <div class="container">
+      <section id="page-content">
+
+        <!-- ## MAP ## -->
+        <div id="qcContactMap"></div>
+        <div id="qcMapAddress" data-lat="50.834783" data-lng="4.444213" data-add="Unbend Records"></div>
+        <script type="text/javascript">
+        function show_map() {
+        var myLatlng = new google.maps.LatLng($('#qcMapAddress').attr('data-lat'),$('#qcMapAddress').attr('data-lng'));
+          var mapOptions = {
+            zoom: 14,
+            center: myLatlng,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+          var map = new google.maps.Map(document.getElementById('qcContactMap'), mapOptions);
+          var contentString = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<div id="bodyContent">'+ $('#qcMapAddress').attr('data-add') +
+          '</div>'+
+          '</div>';
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Unbend Records'
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+          });
+        }
+        show_map();
+        </script>
+        <!-- ## MAP END ## -->
+
+        <!-- POST CONTENT -->
+        <div class="contact postContent clearfix">
+
+          <!-- ## CONTACT COLUMN 1 ## -->
+          <div class="col-6 col">
+
+            <!-- ## CAPTION ## -->
+            <div class="padd-in">
+              <h4 class="qcCaption">CONTACT US</h4>
+              <p>Fill in the following form & Our representative will get back to you shortly.</p>
+            </div>
+
+            <!-- ## CONTACT FORM ## -->
+            <form action="./assets/form/qcForm.php" id="formquote" name="formquote" class="qcForm" method="post">
+              <ol class="form">
+                <li><label for="firstname">Name</label><input type="text" name="firstname" class="firstname requiredField input-txt" value="Name" onfocus="if(this.value == 'Name') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Name';}" /></li>
+                <li><label for="email">Email</label><input type="text" name="email" class="email requiredField input-txt" value="Email" onfocus="if(this.value == 'Email') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Email';}" /></li>
+                <li><label for="message">Message</label><textarea name="message" class="message requiredField input-txt" onfocus="if(this.value == 'Enter Your Message') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter Your Message';}">Message</textarea></li>
+                <li><input type="hidden" name="formtype" value="contact-form"/></li>
+                <li class="buttons"><button type="submit" class="submit btn btn-success"><i class="icon-envelope icon-white"></i> Send Email &nbsp;&#9656;</button><input type="hidden" name="submitted" id="submitted" value="true" /></li>
+              </ol>
+            </form>
+            <!-- ## CONTACT FORM END ## -->
+
+          </div>
+          <!-- ## CONTACT COLUMN 1 END ## -->
+
+          <!-- ## CONTACT COLUMN 2 ## -->
+          <div class="col-6 col">
+
+            <!-- ## CAPTION ## -->
+            <div class="padd-in">
+              <h4 class="qcCaption">LOCATE US</h4>
+            </div>
+
+            <!-- ## ADDRESS LIST ## -->
+            <ul class="qcAddress">
+              <li><i class="icon-map"></i><p><strong>ADDRESS : </strong><br/>Rue au Bois<br/>1150 Woluwe-Saint-Pierre</p></li>
+              <li><i class="icon-user-1"></i><p><strong>PHONE : </strong> +32 2 318 34 53</p></li>
+              <li><i class="icon-mail-1"></i><p><strong>EMAIL : </strong> info@unbend.be</p></li>
+              <li><i class="icon-globe-1"></i><p><strong>WEBSITE : </strong><a title="website" href="http://unbend.be"> unbend.be</a></p></li>
+            </ul>
+
+            <!-- ## SOCIAL NETWORKS List ## -->
+            <ul class="qcSocialIntro clearfix">
+              <li><a href="https://www.facebook.com/unbendrecords" target="_blank"><img alt="image" src="./assets/img/theme/facebook.png" class="tips" title="FACEBOOK"/></a></li>
+              <li><a href="https://twitter.com/unbendrecords" target="_blank"><img alt="image" src="./assets/img/theme/twitter.png" class="tips" title="TWITTER"/></a></li>
+              <li><a href="https://plus.google.com/117286070170200576270" target="_blank"><img alt="image" src="./assets/img/theme/google.png" class="tips" title="GOOGLE"/></a></li>
+              <li><a href="https://www.youtube.com/channel/UCWc9fOVBAJfQgc91Rd3DUxg" target="_blank"><img alt="image" src="./assets/img/theme/youtube.png" class="tips" title="YOUTUBE"/></a></li>
+            </ul>
+
+          </div>
+          <!-- ## CONTACT COLUMN 2 END ## -->
+
+        </div>
+        <!-- POST CONTENT END -->
+
+      </section>
+    </div>
+    <!-- ## PAGE CONTENT END ## -->
+
+  </section>
+  <!-- ## PAGE END ## -->
+
+</div>

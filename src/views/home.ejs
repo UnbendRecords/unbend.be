@@ -1,0 +1,39 @@
+<!-- ## MUSIC ## -->
+<div id="music">
+    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+    <div id="jp_interface_1">
+        <a href="#" class="jp-play"><i class="icon-play"></i> Play</a>
+        <a href="#" class="jp-pause"><i class="icon-pause"></i> Pause</a>
+        <a href="#" class="music-title">- Bang Bang by David Guetta</a>
+    </div>
+</div>
+<!-- ## MUSIC END ## -->
+
+<!-- ## SLIDE CONTENT ## -->
+<section id="slideContent">
+    <div class="container">
+        <h2 id="slidecaption"></h2>
+        <p id="slidecite"></p>
+    </div>
+</section>
+<!-- ## SLIDE CONTENT ## -->
+<!-- ## JPLAYER ## -->
+<script type='text/javascript'>
+    jQuery(document).ready(function(){
+        if(jQuery().jPlayer) {
+            jQuery("#jquery_jplayer_1").jPlayer({
+                ready: function () {
+                    jQuery(this).jPlayer("setMedia", {
+                        mp3:"./assets/song/preview.mp3",
+                        oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
+                    });
+                    //.jPlayer("play");
+                },
+                swfPath: "./assets/js/jplayer/",
+                solution: 'html, flash',
+                cssSelectorAncestor: "#jp_interface_1",
+                supplied: "mp3, oga",
+            });
+        }
+    });
+    </script>

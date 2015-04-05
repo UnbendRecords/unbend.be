@@ -1,0 +1,40 @@
+<!-- ## PAGE WRAPPER ## -->
+<div id="page-wrapper">
+
+    <!-- ## PAGE ## -->
+    <section id="page">
+
+        <!-- ## FIXY WRAPPER ## -->
+        <div id="fixy">
+
+            <!-- ## PAGE HEADER ## -->
+            <header id="page-header">
+                <h1>Albums. <span>Browse through albums </span></h1>
+            </header>
+
+        </div>
+        <!-- ## FIXY WRAPPER END ## -->
+
+        <!-- ## PAGE CONTENT ## -->
+        <div class="container">
+            <section id="page-content">
+
+                <!-- ## ALBUM LIST ## -->
+                <ul id="album-list" class="sortable-list" ng-controller="MusicCtrl">
+                    <li class="col-3 col" ng-repeat="one_music in music">
+                        <div class="album-base single">
+                            <img src="./assets/img/music_covers/{{ one_music.cover }}" alt="Album Art" />
+                            <p><i class="icon-note-beamed"></i> {{ one_music.title }} <span></p><p class="sort-by"><i class="icon-user-1"></i> {{ one_music.artist }}</span></p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- ## ALPHABET BROWSE LIST END ## -->
+
+            </section>
+        </div>
+        <!-- ## PAGE CONTENT END ## -->
+
+    </section>
+    <!-- ## PAGE END ## -->
+
+</div>
