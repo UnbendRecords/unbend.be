@@ -1,7 +1,7 @@
 'use strict';
 
 // var Promise         = require('bluebird');
-var Articles           = require('../models/articlesModel');
+//var Articles           = require('../models/articlesModel');
 
 // var userAttributes =  [
 //                         'id',
