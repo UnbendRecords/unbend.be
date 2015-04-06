@@ -21,22 +21,9 @@
 
                 <!-- IMAGE GALLERY -->
                 <ul id="imgGallery" class="clearfix">
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 1" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 2" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 3" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 4" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 5" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 6" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 7" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 8" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 9" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 10" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 11" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 12" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 13" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 14" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 15" /></a></li>
-                    <li><a href="http://placehold.it/420x280" rel="prettyPhoto[gallery]"><img src="http://placehold.it/420x280" alt="IMAGE 16" /></a></li>
+                    <% for (var i = 15; i >= 0; i--) { %>
+                        <li><img src="./assets/img/studio_pictures/<%= i %>.jpg" alt="IMAGE 1" /></li>
+                    <% }; %>
                 </ul>
                 <!-- IMAGE GALLERY END -->
 

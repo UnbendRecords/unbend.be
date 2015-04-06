@@ -1,4 +1,6 @@
-app.factory('Music', function($http, $q){
+'use strict';
+
+app.factory('Music', function ($http, $q) {
 
   var music = {
 
@@ -9,7 +11,7 @@ app.factory('Music', function($http, $q){
       if (music.music !== false) {
         deferred.resolve(music.music);
       } else {
-        $http({method: 'GET', url: './albums.json'}).
+        $http({method: 'GET', url: '/api/discography'}).
               success(function (data, status, headers, config) {
                 music.music = data;
                 deferred.resolve(music.music);
@@ -25,19 +27,17 @@ app.factory('Music', function($http, $q){
 
 });
 
-app.controller('MusicCtrl', function($scope,Music){
+app.controller('MusicCtrl', function ($scope,Music) {
 
-    $scope.loading = true;
-    $scope.music = Music.getMusic().then(function(music){
-        $scope.music = music;
-        $scope.loading = false;
+  $scope.loading = true;
+  $scope.music = Music.getMusic().then(function (music) {
+    $scope.music = music;
+    $scope.loading = false;
 
-    }, function(msg){
-        $scope.music = [{
-                    "content" : msg,
-                    "date" : " Network Issue"
-                }]
-    });
-
-
+  }, function (msg) {
+    $scope.music = [{
+      'content' : msg,
+      'date' : 'Network Issue'
+    }];
+  });
 });

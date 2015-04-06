@@ -3,7 +3,7 @@
 var express       = require('express');
 var router        = express.Router();
 
-// var Editions      = require('../../controllers/editionsController');
+var Discography   = require('../../controllers/discographyController');
 
 var errorsHandler = require('../fixtures/errorsHandler');
 
@@ -12,7 +12,15 @@ var errorsHandler = require('../fixtures/errorsHandler');
  */
 router.get('/', function (req, res) {
 
-  return res.status(200).json('ok');
+  Discography.getAll()
+      .then(function (articles) {
+
+        return res.status(200).json(articles);
+      })
+      .catch(function (e) {
+
+        return res.status(500).json(errorsHandler(e));
+      });
 
 });
 
