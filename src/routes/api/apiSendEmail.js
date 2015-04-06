@@ -8,20 +8,22 @@ var sendEmail     = require('../../components/sendEmail');
 var errorsHandler = require('../fixtures/errorsHandler');
 
 /**
- * Post Articles data.
+ * Post Message from contact form.
  */
 router.post('/', function (req, res) {
 
   var email   = req.body.email;
   var name    = req.body.name;
   var message = req.body.message;
+  var tag     = req.body.tag;
 
   var mailOptions = {
-    from: 'ABMag Website <webmaster@abmag.be>',
-    to: 'louis@alphabetamagazine.com',
+    From: 'Unbend Records <info@unbend.be>',
+    To: 'info@unbend.be',
     replyTo: email,
-    subject: name + ' vous a laissé un message',
-    text: 'expediteur : ' + name + ' (' + email + ')\nmessage : ' + message
+    Subject: name + ' leaves you a message',
+    TextBody: 'expeditor : ' + name + ' (' + email + ')\nmessage : ' + message,
+    Tag: tag
   };
 
   sendEmail(mailOptions)

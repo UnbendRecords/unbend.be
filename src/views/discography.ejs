@@ -23,8 +23,10 @@
                 <ul id="album-list" class="sortable-list" ng-controller="MusicCtrl">
                     <li class="col-3 col" ng-repeat="one_music in music">
                         <div class="album-base single">
+                            <span itemscope itemtype="http://schema.org/MusicRecording">
                             <img src="./assets/img/music_covers/{{ one_music.id }}.jpg" alt="{{ one_music.title }} - {{ one_music.artist }}" />
-                            <p><i class="icon-note-beamed"></i> {{ one_music.title }} <span></p><p class="sort-by"><i class="icon-user-1"></i> {{ one_music.artist }}</span></p>
+                            <p><i class="icon-note-beamed"></i> <span itemprop="name">{{ one_music.title }}</span><span></p><p class="sort-by"><i class="icon-user-1"></i> <span itemprop="byArtist">{{ one_music.artist }}</span></span></p>
+                            </span>
                         </div>
                     </li>
                 </ul>

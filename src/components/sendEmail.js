@@ -1,29 +1,25 @@
 'use strict';
 
-var Promise  = require('bluebird'),
-config       = require('config'),
-nodemailer   = require('nodemailer'),
-sesTransport = require('nodemailer-ses-transport');
-
-var transporter = nodemailer.createTransport(sesTransport({
-  accessKeyId     : config.ses.key,
-  secretAccessKey : config.ses.secret,
-  rateLimit       : 1,
-  region          : 'eu-west-1'
-}));
+var Promise  = require('bluebird');
+var config   = require('config');
+var postmark = require('postmark')(config.postmark.key);
 
 module.exports = function (mailOptions) {
 
   return new Promise(function (resolve, reject) {
 
-    console.log(mailOptions);
-
-    transporter.sendMail(mailOptions, function (error, data) {
+    postmark.send(mailOptions, function (error) {
       if (error) {
-        reject(error);
-      } else {
-        resolve(data);
+
+        reject({
+          success: false,
+          message: error.message
+        });
       }
+
+      resolve({
+        success: true
+      });
     });
   });
 };

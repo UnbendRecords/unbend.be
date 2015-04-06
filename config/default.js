@@ -22,9 +22,8 @@ module.exports = {
   abm: {
     baseUrl: 'http://unbend.be/'
   },
-  ses: {
-    key: env.ses_key,
-    secret: env.ses_secret
+  postmark: {
+    key: env.POSTMARK_API_KEY
   },
   mailchimp : {
     key: env.mailchimp_key,

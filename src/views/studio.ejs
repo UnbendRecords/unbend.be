@@ -22,7 +22,9 @@
                 <!-- IMAGE GALLERY -->
                 <ul id="imgGallery" class="clearfix">
                     <% for (var i = 15; i >= 0; i--) { %>
-                        <li><img src="./assets/img/studio_pictures/<%= i %>.jpg" alt="IMAGE 1" /></li>
+                        <span itemscope itemtype="http://schema.org/ImageObject">
+                            <li><img src="./assets/img/studio_pictures/<%= i %>.jpg" alt="Unbend Records Studio <%= i %>" itemprop="contentUrl"/></li>
+                        </span>
                     <% }; %>
                 </ul>
                 <!-- IMAGE GALLERY END -->

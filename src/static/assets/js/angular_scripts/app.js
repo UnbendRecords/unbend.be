@@ -1,23 +1,22 @@
-var app = angular.module('app', ['ngRoute','ngAnimate']);
+var app = angular.module('app', ['ngRoute', 'ngAnimate']);
 
-app.config(function($animateProvider) {
+app.config(function ($animateProvider) {
   $animateProvider.classNameFilter(/angular-animate/);
 });
 
-app.config(function($locationProvider) {
+app.config(function ($locationProvider) {
   $locationProvider.html5Mode({
     enabled: true,
     requireBase: true
   });
 });
 
-app.config(function($routeProvider, $httpProvider){
+app.config(function ($routeProvider, $httpProvider) {
   $routeProvider
       .when('/', {templateUrl: 'view/home'})
       .when('/discography', {templateUrl: 'view/discography'})
       .when('/studio', {templateUrl: 'view/studio'})
       .when('/contact', {templateUrl: 'view/contact'})
-      // .when('/settings', {templateUrl: 'partials/settings.html'})
       .otherwise({redirectTo: '/'});
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
   delete $httpProvider.defaults.headers.common['Content-Type'];
