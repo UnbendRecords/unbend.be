@@ -3,8 +3,6 @@
 var express      = require('express');
 var router       = express.Router();
 
-var errorsHandler = require('./fixtures/errorsHandler');
-
 /**
  * Get root page.
  */
@@ -45,7 +43,7 @@ router.get('/view/home', function (req, res) {
 });
 
 /**
- * Get studio page.
+ * Get Studio page.
  */
 router.get('/studio', function (req, res) {
 
@@ -58,7 +56,7 @@ router.get('/studio', function (req, res) {
 });
 
 /**
- * Get studio view.
+ * Get Studio view.
  */
 router.get('/view/studio', function (req, res) {
 
@@ -71,7 +69,7 @@ router.get('/view/studio', function (req, res) {
 });
 
 /**
- * Get discography page.
+ * Get Discography page.
  */
 router.get('/discography', function (req, res) {
 
@@ -84,7 +82,7 @@ router.get('/discography', function (req, res) {
 });
 
 /**
- * Get discography view.
+ * Get Discography view.
  */
 router.get('/view/discography', function (req, res) {
 
@@ -97,7 +95,7 @@ router.get('/view/discography', function (req, res) {
 });
 
 /**
- * Get contact page.
+ * Get Contact page.
  */
 router.get('/contact', function (req, res) {
 
@@ -110,7 +108,7 @@ router.get('/contact', function (req, res) {
 });
 
 /**
- * Get contact view
+ * Get Contact view
  */
 router.get('/view/contact', function (req, res) {
 

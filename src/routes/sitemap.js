@@ -5,9 +5,9 @@ var express  = require('express');
 var router   = express.Router();
 
 var sm = sitemap.createSitemap({
-        hostname : '//unbend.be',
-        cacheTime : 1000 * 60 * 24  //keep the sitemap cached for 24 hours
-    });
+  hostname : '//unbend.be',
+  cacheTime : 1000 * 60 * 24
+});
 
 router.get('/', function (req, res) {
   if (sm.isCacheValid()) {

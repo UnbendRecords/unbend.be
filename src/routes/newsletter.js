@@ -7,7 +7,7 @@ var router         = express.Router();
 var mailChimp      = require('../resources/mailchimp');
 var errorsHandler  = require('./fixtures/errorsHandler');
 
-var listID = config.mailchimp.newsletterListId;  // Change this to your List ID
+var listID = config.mailchimp.newsletterListId;
 
 router.post('/subscribe', function (req, res) {
 
