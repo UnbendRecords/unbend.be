@@ -1,5 +1,7 @@
 'use strict';
 
+require('newrelic');
+
 var bodyParser       = require('body-parser');
 var compress         = require('compression');
 var config           = require('config');
