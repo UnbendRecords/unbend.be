@@ -24,3 +24,8 @@ body, #primary-nav li a > p, #primary-nav ul li ul li a, #sec-nav ul li a, #mobi
 .detail-meta, a.read-more, #pagiNation li a:hover, .qcForm .btn-success, #artistCol, ul.tabs li a.selected, .postContent a:hover, .fullwidth a:hover {
 	border-color: #FF8B22;
 }
+
+p {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
