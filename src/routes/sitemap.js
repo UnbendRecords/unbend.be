@@ -5,7 +5,7 @@ var express  = require('express');
 var router   = express.Router();
 
 var sm = sitemap.createSitemap({
-  hostname : '//unbend.be',
+  hostname : '//www.unbend.be',
   cacheTime : 1000 * 60 * 24
 });
 
@@ -19,22 +19,22 @@ router.get('/', function (req, res) {
     sm.urls = [];
 
     sm.add({
-      url : 'http://unbend.be/',
+      url : 'http://www.unbend.be/',
       changefreq :'monthly'
     });
 
     sm.add({
-      url : 'http://unbend.be/discography',
+      url : 'http://www.unbend.be/discography',
       changefreq :'daily'
     });
 
     sm.add({
-      url : 'http://unbend.be/studio',
+      url : 'http://www.unbend.be/studio',
       changefreq :'monthly'
     });
 
     sm.add({
-      url : 'http://unbend.be/contact',
+      url : 'http://www.unbend.be/contact',
       changefreq :'monthly'
     });
 
