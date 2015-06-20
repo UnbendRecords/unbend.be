@@ -1,6 +1,6 @@
 machine:
   environment:
-    COMPOSE_PROJECT_NAME: unbend_records
+    COMPOSE_PROJECT_NAME: unbendrecords
   services:
     - docker
 
@@ -23,6 +23,6 @@ deployment:
     branch: master
     commands:
       - echo -e "[auth]\nuser = $TUTUM_USER\napikey = $TUTUM_APIKEY" > ~/.tutum
-      - docker tag unbend_records_node tutum.co/$TUTUM_USER/unbend_node:v$CIRCLE_BUILD_NUM
+      - docker tag unbendrecords_node tutum.co/$TUTUM_USER/unbend_node:v$CIRCLE_BUILD_NUM
       - docker tag tutum.co/$TUTUM_USER/unbend_node:v$CIRCLE_BUILD_NUM tutum.co/$TUTUM_USER/unbend_node:$latest
       - tutum image push tutum.co/$TUTUM_USER/unbend_node
