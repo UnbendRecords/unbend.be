@@ -1,7 +1,5 @@
 'use strict';
 
-require('newrelic');
-
 var bodyParser       = require('body-parser');
 var compress         = require('compression');
 var config           = require('config');
@@ -33,6 +31,17 @@ app.use(bodyParser.json({ reviver: true }));
 app.use(express.static(path.join(__dirname, './src/static')));
 app.use(prerender.set('prerenderToken', config.prerender.token));
 app.use(favicon(__dirname + '/src/static/assets/img/favicon/favicon.ico'));
+
+/*
+  WWW to now-WWW
+ */
+app.get('/*', function (req, res, next) {
+  if (req.headers.host.match(/^www/) !== null) {
+    res.redirect(301, 'http://' + req.headers.host.replace(/^www\./, '') + req.url);
+  } else {
+    next();
+  }
+})
 
 /*
   Routes

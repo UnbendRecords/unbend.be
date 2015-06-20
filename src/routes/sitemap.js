@@ -42,10 +42,7 @@ router.get('/', function (req, res) {
       res.header('Content-Type', 'application/xml');
       res.send(xml);
     });
-
   }
-
-
 });
 
 module.exports = router;

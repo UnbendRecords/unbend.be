@@ -8,10 +8,6 @@ var router       = express.Router();
  */
 router.get('/', function (req, res) {
 
-  if (req.user) {
-    console.log(req.user);
-  }
-
   res.render('index');
 
 });
@@ -20,10 +16,6 @@ router.get('/', function (req, res) {
  * Get Home page.
  */
 router.get('/home', function (req, res) {
-
-  if (req.user) {
-    console.log(req.user);
-  }
 
   res.render('index');
 
@@ -34,10 +26,6 @@ router.get('/home', function (req, res) {
  */
 router.get('/view/home', function (req, res) {
 
-  if (req.user) {
-    console.log(req.user);
-  }
-
   res.render('home');
 
 });
@@ -46,10 +34,6 @@ router.get('/view/home', function (req, res) {
  * Get Studio page.
  */
 router.get('/studio', function (req, res) {
-
-  if (req.user) {
-    console.log(req.user);
-  }
 
   res.render('index');
 
@@ -60,10 +44,6 @@ router.get('/studio', function (req, res) {
  */
 router.get('/view/studio', function (req, res) {
 
-  if (req.user) {
-    console.log(req.user);
-  }
-
   res.render('studio');
 
 });
@@ -72,10 +52,6 @@ router.get('/view/studio', function (req, res) {
  * Get Discography page.
  */
 router.get('/discography', function (req, res) {
-
-  if (req.user) {
-    console.log(req.user);
-  }
 
   res.render('index');
 
@@ -86,10 +62,6 @@ router.get('/discography', function (req, res) {
  */
 router.get('/view/discography', function (req, res) {
 
-  if (req.user) {
-    console.log(req.user);
-  }
-
   res.render('discography');
 
 });
@@ -99,10 +71,6 @@ router.get('/view/discography', function (req, res) {
  */
 router.get('/contact', function (req, res) {
 
-  if (req.user) {
-    console.log(req.user);
-  }
-
   res.render('index');
 
 });
@@ -111,10 +79,6 @@ router.get('/contact', function (req, res) {
  * Get Contact view
  */
 router.get('/view/contact', function (req, res) {
-
-  if (req.user) {
-    console.log(req.user);
-  }
 
   res.render('contact');
 

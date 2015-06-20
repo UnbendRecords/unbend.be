@@ -3,8 +3,6 @@
 var express       = require('express');
 var router        = express.Router();
 
-// var Editions      = require('../../controllers/editionsController');
-
 var errorsHandler = require('../fixtures/errorsHandler');
 
 /**
