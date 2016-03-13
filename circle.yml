@@ -21,6 +21,6 @@ deployment:
     branch: master
     commands:
       - echo "{\"https://index.docker.io/v1/\":{\"auth\":\"<AUTH>\",\"email\":\"<EMAIL>\"}}" | sed "s/<EMAIL>/$HUB_EMAIL/;s/<AUTH>/$HUB_AUTH/" > ~/.dockercfg
-      - docker tag unbendrecords_node tutum.co/$TUTUM_USER/unbend_node:v$CIRCLE_BUILD_NUM
-      - docker tag tutum.co/$TUTUM_USER/unbend_node:v$CIRCLE_BUILD_NUM tutum.co/$TUTUM_USER/unbend_node:$latest
-      - docker push tutum.co/$TUTUM_USER/unbend_node
+      - docker tag unbendrecords_node satblip/unbend_node:v$CIRCLE_BUILD_NUM
+      - docker tag satblip/unbend_node:v$CIRCLE_BUILD_NUM satblip/unbend_node:$latest
+      - docker push satblip/unbend_node
